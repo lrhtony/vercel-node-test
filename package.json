@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/lrhtony/vercel-node-test/issues"
   },
-  "homepage": "https://github.com/lrhtony/vercel-node-test#readme"
+  "homepage": "https://github.com/lrhtony/vercel-node-test#readme",
+  "dependencies": {
+    "memory-cache": "^0.2.0"
+  }
 }
