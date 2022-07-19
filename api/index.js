@@ -1,12 +1,8 @@
-const cache = require('memory-cache');
-
 export default function index(req, res) {
-    let cacheData = cache.get('cacheTime');
-    console.log(cacheData);
-    if (cacheData === null) {
-        cache.put('cacheTime', Date.now())
-        res.send('Cache is empty');
-    } else {
-        res.send(cacheData);
-    }
+    res.writeHead(302, {
+        'Content-Type': 'text/html',
+        'Location': 'https://www.google.com',
+        'Cache-Control': 'max-age=259200'
+    });
+    res.end('test cache');
 }
